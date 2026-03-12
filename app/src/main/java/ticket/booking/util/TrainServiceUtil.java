@@ -8,6 +8,7 @@ import ticket.booking.entities.User;
 
 import java.io.File;
 import java.io.IOException;
+import java.io.InputStream;
 import java.util.List;
 
 public class TrainServiceUtil {
@@ -20,7 +21,8 @@ public class TrainServiceUtil {
 
     public List<Train> loadAllTrainsListFromFile() throws IOException {
         // load the user from file to memory
-        return allTrainsList = objectMapper.readValue(new File(TRAINS_PATH), new TypeReference<List<Train>>() {});
+        InputStream is = TrainServiceUtil.class.getClassLoader().getResourceAsStream(TRAINS_PATH);
+        return allTrainsList = objectMapper.readValue(is, new TypeReference<List<Train>>() {});
     }
 
     public void saveAllTrainsListToFile() throws IOException {
