@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="CompilerConfiguration">
-    <bytecodeTargetLevel target="21" />
+    <bytecodeTargetLevel target="21">
+      <module name="ticket-booking" target="25" />
+      <module name="ticket-booking.main" target="25" />
+      <module name="ticket-booking.test" target="25" />
+    </bytecodeTargetLevel>
   </component>
 </project>

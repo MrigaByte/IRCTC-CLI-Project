@@ -1,1 +1,2 @@
 rootProject.name = "IRCTC"
+include(":app")
